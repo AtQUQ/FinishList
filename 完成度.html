@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人生已完成清单</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, sans-serif;}
+body{background:#fff;padding:25px 16px;max-width:780px;margin:0 auto;color:#222;line-height:1.8;font-size:14px;}
+.header{text-align:center;margin-bottom:30px;}
+h1{font-size:28px;font-weight:500;margin-bottom:12px;}
+.count-info{font-size:15px;color:#666;}
+.item{display:inline-block;padding:1px 3px;margin:2px 1px;cursor:pointer;transition:0.15s;background:#fff;}
+.item.active{background:#ffc8da;}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>人生已完成清单</h1>
+<div class="count-info">总数量：189 | 已完成：<span id="doneNum">0</span></div>
+</div>
+
+<div id="listBox">
+<div class="row">
+<span class="item">送礼物</span>
+<span class="item">被送礼物</span>
+<span class="item">暗恋</span>
+<span class="item">明恋</span>
+<span class="item">失恋</span>
+<span class="item">表白</span>
+<span class="item">被表白</span>
+<span class="item">留长发</span>
+<span class="item">剪短发</span>
+<span class="item">染发</span>
+</div>
+<div class="row">
+<span class="item">漂发</span>
+<span class="item">烫发</span>
+<span class="item">化妆</span>
+<span class="item">做美甲</span>
+<span class="item">放下一个人</span>
+<span class="item">有过遗憾</span>
+<span class="item">爱而不得</span>
+<span class="item">双向奔赴</span>
+</div>
+<div class="row">
+<span class="item">当海王</span>
+<span class="item">拒绝他人表白</span>
+<span class="item">表白被拒</span>
+<span class="item">被渣</span>
+<span class="item">犯过傻</span>
+<span class="item">装糊涂</span>
+<span class="item">犯校规</span>
+<span class="item">打架</span>
+<span class="item">迟到</span>
+</div>
+<div class="row">
+<span class="item">旷课</span>
+<span class="item">上课睡觉</span>
+<span class="item">打架被叫家长</span>
+<span class="item">喝酒</span>
+<span class="item">抽烟</span>
+<span class="item">纹身</span>
+<span class="item">去清吧</span>
+<span class="item">和朋友去KTV</span>
+</div>
+<div class="row">
+<span class="item">断片</span>
+<span class="item">失眠</span>
+<span class="item">睡一天</span>
+<span class="item">吵架</span>
+<span class="item">绝交</span>
+<span class="item">晚上一个人哭</span>
+<span class="item">捐血</span>
+<span class="item">住院</span>
+<span class="item">做手术</span>
+<span class="item">晕倒</span>
+</div>
+<div class="row">
+<span class="item">会做饭</span>
+<span class="item">做一桌菜</span>
+<span class="item">做饭给家人</span>
+<span class="item">做甜品给喜欢的人</span>
+<span class="item">有超过10年的好朋友</span>
+</div>
+<div class="row">
+<span class="item">有个无条件可信任的朋友</span>
+<span class="item">买花</span>
+<span class="item">被送花</span>
+<span class="item">给自己买礼物</span>
+<span class="item">通宵补作业</span>
+</div>
+<div class="row">
+<span class="item">一个人散步</span>
+<span class="item">夜跑</span>
+<span class="item">深夜散心</span>
+<span class="item">向陌生人吐露心声</span>
+<span class="item">一个人出去吃饭</span>
+</div>
+<div class="row">
+<span class="item">一个人看电影</span>
+<span class="item">摄影</span>
+<span class="item">一个人去酒吧</span>
+<span class="item">一个人过生日</span>
+<span class="item">一个人逛超市</span>
+</div>
+<div class="row">
+<span class="item">一个人去图书馆</span>
+<span class="item">一个人看病</span>
+<span class="item">一个人去唱歌</span>
+<span class="item">社死过</span>
+<span class="item">一个人出门逛</span>
+</div>
+<div class="row">
+<span class="item">一个人在外难过</span>
+<span class="item">给自己写信</span>
+<span class="item">出国</span>
+<span class="item">一个人旅游</span>
+<span class="item">跟朋友旅游</span>
+</div>
+<div class="row">
+<span class="item">拥有要好的异性朋友</span>
+<span class="item">谈恋爱</span>
+<span class="item">考试不及格</span>
+<span class="item">考试第一名</span>
+<span class="item">当班干部</span>
+</div>
+<div class="row">
+<span class="item">竞选学生会</span>
+<span class="item">上电视</span>
+<span class="item">上报纸</span>
+<span class="item">登台演出</span>
+<span class="item">主持节目</span>
+<span class="item">演讲</span>
+<span class="item">野性消费</span>
+</div>
+<div class="row">
+<span class="item">买东西被宰</span>
+<span class="item">被老师点名表扬</span>
+<span class="item">被老师点名批评</span>
+<span class="item">全校表扬</span>
+<span class="item">被背叛</span>
+<span class="item">被伤害</span>
+</div>
+<div class="row">
+<span class="item">被坚定选择</span>
+<span class="item">获奖</span>
+<span class="item">学一种语言</span>
+<span class="item">写论文</span>
+<span class="item">写书</span>
+<span class="item">写诗</span>
+<span class="item">写日记</span>
+<span class="item">写剧本</span>
+<span class="item">写歌</span>
+</div>
+<div class="row">
+<span class="item">拍影片</span>
+<span class="item">参加比赛</span>
+<span class="item">拍写真</span>
+<span class="item">买相机</span>
+<span class="item">会一种乐器</span>
+<span class="item">有超过5年的兴趣爱好</span>
+</div>
+<div class="row">
+<span class="item">参加志愿活动</span>
+<span class="item">自己一个人在外面住过</span>
+<span class="item">看鬼片</span>
+<span class="item">去密室</span>
+<span class="item">去鬼屋</span>
+<span class="item">去游乐场</span>
+</div>
+<div class="row">
+<span class="item">去看现场演唱会</span>
+<span class="item">去音乐节</span>
+<span class="item">偶遇明星</span>
+<span class="item">去签售会</span>
+<span class="item">在图书馆待一天</span>
+<span class="item">兼职</span>
+</div>
+<div class="row">
+<span class="item">打工</span>
+<span class="item">看画展</span>
+<span class="item">捐款</span>
+<span class="item">道歉</span>
+<span class="item">释怀</span>
+<span class="item">失望</span>
+<span class="item">淋雨</span>
+<span class="item">种花</span>
+<span class="item">养宠物</span>
+<span class="item">泡温泉</span>
+<span class="item">跳伞</span>
+</div>
+<div class="row">
+<span class="item">坐过山车</span>
+<span class="item">蹦极</span>
+<span class="item">骑马</span>
+<span class="item">卡丁车</span>
+<span class="item">攀岩</span>
+<span class="item">游泳</span>
+<span class="item">滑雪</span>
+<span class="item">滑冰</span>
+<span class="item">旱冰</span>
+<span class="item">滑板</span>
+<span class="item">去野炊</span>
+</div>
+<div class="row">
+<span class="item">登山</span>
+<span class="item">看雪</span>
+<span class="item">看海</span>
+<span class="item">看日出</span>
+<span class="item">看日落</span>
+<span class="item">看雪海</span>
+<span class="item">给父母买衣服</span>
+</div>
+</div>
+
+<script>
+// 本地存储key
+const STORAGE_KEY = 'lifeCheckListData';
+const items = document.querySelectorAll('.item');
+const doneNumEl = document.getElementById('doneNum');
+
+// 读取本地记录
+function loadData(){
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if(!saved) return {};
+    return JSON.parse(saved);
+}
+
+// 保存记录到本地
+function saveData(data){
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+// 更新已完成数量
+function updateCount(){
+    const active = document.querySelectorAll('.item.active').length;
+    doneNumEl.innerText = active;
+}
+
+// 初始化页面状态
+function init(){
+    const data = loadData();
+    items.forEach(el=>{
+        const text = el.innerText;
+        if(data[text]) el.classList.add('active');
+        // 点击切换
+        el.onclick = ()=>{
+            el.classList.toggle('active');
+            const newData = loadData();
+            newData[text] = el.classList.contains('active');
+            saveData(newData);
+            updateCount();
+        }
+    })
+    updateCount();
+}
+
+init();
+</script>
+</body>
+</html>
